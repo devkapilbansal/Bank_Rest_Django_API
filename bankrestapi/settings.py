@@ -22,10 +22,10 @@ BASE_DIR = path.dirname(path.dirname(path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = environ["SECRET_KEY"]
-SECRET_KEY = 'ltt=oq3$8js7=w%e$-j7w*fm6+ei85rt0p-7jbxnzl1o1dlbex'
+SECRET_KEY = environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ifscbankrestapi.herokuapp.com', '127.0.0.1','localhost']
 
@@ -97,7 +97,7 @@ JWT_AUTH = {
     'JWT_AUDIENCE': None,
     'JWT_ISSUER': None,
 
-    'JWT_ALLOW_REFRESH': True,
+    'JWT_ALLOW_REFRESH': False,
     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=5),
 
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
@@ -132,11 +132,11 @@ WSGI_APPLICATION = 'bankrestapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bank_data',
-        'USER': 'postgres',
-        'PASSWORD': 'Freshlybuilt',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'NAME': environ['DB_NAME'],
+        'USER': environ['DB_USER'],
+        'PASSWORD': environ['DB_PASSWORD'],
+        'HOST': environ['DB_HOST'],
+        'PORT': environ['DB_PORT'],
     }
 }
 
