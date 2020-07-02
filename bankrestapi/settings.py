@@ -131,11 +131,7 @@ WSGI_APPLICATION = 'bankrestapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd1gheb6k6acm9g',
-        'USER': 'ckbzkaufhmxgfn',
-        'password': 'b61f350ff7a75df7882beb5f3e133ce50351701d76eaa03f1d9bcce06e24aecd',
-        'HOST': 'ec2-34-206-31-217.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME':  'os.path.join(BASE_DIR, 'indian_banks.sql')'
     }
 }
 
