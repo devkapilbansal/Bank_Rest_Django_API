@@ -129,11 +129,11 @@ WSGI_APPLICATION = 'bankrestapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bank_data',
-        'USER': 'postgres',
-        'PASSWORD': 'Freshlybuilt',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'NAME': environ['DB_NAME'],
+        'USER': environ['DB_USER'],
+        'PASSWORD': environ['DB_PASSWORD'],
+        'HOST': environ['DB_HOST'],
+        'PORT': environ['DB_PORT'],
     }
 }
 
