@@ -131,10 +131,10 @@ WSGI_APPLICATION = 'bankrestapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dboa7i9omira0u',
-        'USER': 'ajqkzsyfdtvkyx',
-        'password': '1fac9467538b8bfa08deec4675491ca4e2dc8eb1e890402f77f9a508241c7bda',
-        'HOST': 'ec2-18-211-48-247.compute-1.amazonaws.com',
+        'NAME': 'd1gheb6k6acm9g',
+        'USER': 'ckbzkaufhmxgfn',
+        'password': 'b61f350ff7a75df7882beb5f3e133ce50351701d76eaa03f1d9bcce06e24aecd',
+        'HOST': 'ec2-34-206-31-217.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
