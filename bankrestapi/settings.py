@@ -25,7 +25,7 @@ BASE_DIR = path.dirname(path.dirname(path.abspath(__file__)))
 SECRET_KEY = 'ltt=oq3$8js7=w%e$-j7w*fm6+ei85rt0p-7jbxnzl1o1dlbex'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ifscbankrestapi.herokuapp.com', '127.0.0.1']
 
