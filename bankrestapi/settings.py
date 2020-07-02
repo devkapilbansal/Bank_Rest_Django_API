@@ -131,7 +131,7 @@ WSGI_APPLICATION = 'bankrestapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':  'os.path.join(BASE_DIR, 'indian_banks.sql')'
+        'NAME':  'os.path.join(BASE_DIR, 'indian_banks.sql'),
     }
 }
 
