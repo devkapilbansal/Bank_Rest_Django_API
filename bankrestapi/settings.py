@@ -22,7 +22,7 @@ BASE_DIR = path.dirname(path.dirname(path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = environ["SECRET_KEY"]
-SECRET_KEY = 'ltt=oq3$8js7=w%e$-j7w*fm6+ei85rt0p-7jbxnzl1o1dlbex'
+SECRET_KEY = environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -94,7 +94,7 @@ JWT_AUTH = {
     'JWT_AUDIENCE': None,
     'JWT_ISSUER': None,
 
-    'JWT_ALLOW_REFRESH': True,
+    'JWT_ALLOW_REFRESH': False,
     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=5),
 
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
