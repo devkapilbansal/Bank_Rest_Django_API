@@ -123,7 +123,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bankrestapi.wsgi.application'
 
-DATABASES['default'].update(dj_database_url.config())
+
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -139,7 +139,7 @@ DATABASES = {
     }
 }
 
-
+DATABASES['default'].update(dj_database_url.config())
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
