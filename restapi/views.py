@@ -1,7 +1,8 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 # Create your views here.
 from rest_framework import generics
+from rest_framework.response import Response
 from .models import BankBranch
 from .serializer import BankBranchSerializer
 from rest_framework import permissions
@@ -24,6 +25,7 @@ class ListBankDetailsView(generics.ListAPIView):
             qs = qs.filter(bank_name=name).filter(city=city)
 
         return qs
+
 
 
 class BankDetailsIfcsView(generics.RetrieveAPIView):

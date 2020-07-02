@@ -27,7 +27,7 @@ SECRET_KEY = 'ltt=oq3$8js7=w%e$-j7w*fm6+ei85rt0p-7jbxnzl1o1dlbex'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ifscbankrestapi.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ifscbankrestapi.herokuapp.com', '127.0.0.1','localhost']
 
 
 
@@ -59,6 +59,9 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
