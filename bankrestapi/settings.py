@@ -66,6 +66,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.IsAdminUser'
     ],
 }
 
@@ -101,7 +102,7 @@ JWT_AUTH = {
     'JWT_ALLOW_REFRESH': False,
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=5),
 
-    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
+    'JWT_AUTH_HEADER_PREFIX': 'TOKEN',
     'JWT_AUTH_COOKIE': None,
 }
 
