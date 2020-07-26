@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from .models import BankBranch
 from .serializer import BankBranchSerializer
 from rest_framework import permissions
+from rest_framework.response import Response
 
 
 class ListBankDetailsView(generics.ListAPIView):
